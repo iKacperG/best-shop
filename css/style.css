@@ -13,11 +13,14 @@
 img {
     max-width: 100%;
     max-height: 100%;
+   
 }
 
 header {
     width: 100%;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
 
 }
 
@@ -301,11 +304,13 @@ p.popularity-p {
     flex-direction: column;
     padding: 20px;
     margin: 38px;
+    flex-wrap: wrap;
 }
 
 .lure-article {
     display: flex;
     height: 370px;
+
 }
 
 h2.lure-h2 {
@@ -319,22 +324,26 @@ p.lure-p {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     font-size: 16px;
+    padding:20px 0;
 }
 
 p.lure-p.lure-greenish::after {
     content: "";
     position: absolute;
     border-bottom: 4px solid var(--color-green);
-    width: 328px;
+    width: 60%;
+    max-width: 60%;
     bottom: 70px;
     left: 20px;
+
 }
 
 p.lure-p.lure-redish::after {
     content: "";
     position: absolute;
     border-bottom: 4px solid var(--color-redish);
-    width: 328px;
+    width: 60%;
+    max-width: 60%;
     bottom: 70px;
     left: 20px;
 }
@@ -343,17 +352,57 @@ p.lure-p.lure-blueish::after {
     content: "";
     position: absolute;
     border-bottom: 4px solid var(--color-primary);
-    width: 328px;
+    width: 60%;
+    max-width: 60%;
     bottom: 70px;
     left: 20px;
 }
 
-div.lure-article-section::after{
+div.lure-article-section.mac-section::before{
     position: absolute;
     content: "";
+    background: var(--color-redish);
+    width: 255px;
+    height: 255px;
+    border-radius: 20px;
+    transform: rotate(45deg);
+    z-index: -1;
 }
-img .mac::after{
+
+
+div.lure-article-section.iphone-section::before{
     position: absolute;
     content: "";
+    background: var(--color-primary);
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    z-index: -1;
 
+}
+
+div.lure-article-section.trumpet-section::before{
+    position: absolute;
+    content: "";
+    background: var(--color-green);
+    width: 440px;
+    height: 370px;
+    z-index: -1;
+
+
+}
+.lure-article-section.mac-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lure-article-section.iphone-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lure-article-section.trumpet-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
